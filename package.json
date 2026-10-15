@@ -1,0 +1,61 @@
+{
+    "name": "n8n-nodes-whatsync",
+    "version": "0.1.0",
+    "description": "Send and read WhatsApp messages from n8n with WhatSync, on your personal WhatsApp or the official WhatsApp Business API, and start workflows from new messages.",
+    "license": "MIT",
+    "homepage": "https://github.com/itsanishjain/n8n-nodes-whatsync#readme",
+    "keywords": [
+        "n8n-community-node-package",
+        "n8n",
+        "whatsapp",
+        "whatsapp-business",
+        "whatsapp-api",
+        "whatsync"
+    ],
+    "author": {
+        "name": "Anish Jain",
+        "email": "hello@appstronauts.shop"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/itsanishjain/n8n-nodes-whatsync.git"
+    },
+    "scripts": {
+        "build": "n8n-node build",
+        "build:watch": "tsc --watch",
+        "dev": "n8n-node dev",
+        "lint": "n8n-node lint",
+        "lint:fix": "n8n-node lint --fix",
+        "release": "n8n-node release",
+        "prepublishOnly": "n8n-node prerelease"
+    },
+    "files": [
+        "dist",
+        "!dist/tsconfig.tsbuildinfo",
+        "!dist/**/*.map"
+    ],
+    "n8n": {
+        "n8nNodesApiVersion": 1,
+        "strict": true,
+        "credentials": [
+            "dist/credentials/WhatSyncApi.credentials.js"
+        ],
+        "nodes": [
+            "dist/nodes/WhatSync/WhatSync.node.js",
+            "dist/nodes/WhatSyncTrigger/WhatSyncTrigger.node.js"
+        ]
+    },
+    "devDependencies": {
+        "@n8n/node-cli": "*",
+        "eslint": "9.32.0",
+        "prettier": "3.6.2",
+        "release-it": "^21.1.0",
+        "typescript": "5.9.2"
+    },
+    "peerDependencies": {
+        "n8n-workflow": "*"
+    },
+    "bugs": {
+        "url": "https://github.com/itsanishjain/n8n-nodes-whatsync/issues"
+    }
+}

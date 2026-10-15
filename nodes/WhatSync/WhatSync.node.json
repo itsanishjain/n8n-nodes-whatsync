@@ -1,0 +1,10 @@
+{
+	"node": "n8n-nodes-whatsync.whatSync",
+	"nodeVersion": "1.0",
+	"codexVersion": "1.0",
+	"categories": ["Communication"],
+	"resources": {
+		"credentialDocumentation": [{ "url": "https://whatsync.app/docs/api/authentication" }],
+		"primaryDocumentation": [{ "url": "https://github.com/itsanishjain/n8n-nodes-whatsync#readme" }]
+	}
+}
